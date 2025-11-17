@@ -1,0 +1,126 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color-scheme: light dark;
+  background-color: #f5f5f5;
+  color: #1f1f1f;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  padding: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+button:disabled {
+  background: #a1a1aa;
+  cursor: not-allowed;
+}
+
+input, select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #d4d4d8;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.option-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.option-box {
+  flex: 1 1 150px;
+  min-height: 64px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background: #f4f4f5;
+  color: #1f1f1f;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  transition: transform 0.1s ease, border-color 0.1s ease, background 0.1s ease;
+}
+
+.option-box:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.option-box.selected {
+  border-color: #2563eb;
+  background: #dbeafe;
+}
+
+.option-box.correct {
+  border-color: #16a34a;
+  background: #dcfce7;
+}
+
+.option-box.incorrect {
+  border-color: #dc2626;
+  background: #fee2e2;
+}
+
+.option-box.disabled {
+  border-color: #d4d4d8;
+  background: #f4f4f5;
+  opacity: 0.75;
+  cursor: default;
+}
+
+.scoreboard {
+  margin-top: 0.75rem;
+}
+
+.scoreboard-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scoreboard-table th,
+.scoreboard-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.scoreboard-table th {
+  text-align: left;
+  background: #f8fafc;
+}
+
+.scoreboard-name {
+  font-weight: 600;
+}
+
+.scoreboard-email {
+  display: block;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.scoreboard-empty {
+  color: #6b7280;
+}
